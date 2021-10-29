@@ -1,0 +1,52 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": [
+          "last 2 versions",
+          "safari >= 7"
+        ]
+      }
+    ],
+    [
+      "next/babel",
+      {
+        "preset-env": {
+          "useBuiltIns": "usage",
+          "corejs": "2.6.5"
+        }
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      { "corejs": 2 }
+    ],
+    [
+      "styled-components", 
+      { "ssr": true }
+    ],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "redux": "./src/redux",
+          "features": "./src/features",
+          "helpers": "./src/helpers",
+          "hocs": "./src/hocs",
+          "middleware": "./src/middleware",
+          "pages": "./src/pages",
+          "styles": "./src/styles"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [["@babel/preset-env", { "modules": false } ], "next/babel"]
+    }
+  }
+}

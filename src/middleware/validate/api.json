@@ -1,0 +1,161 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Pokequiz API",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "name": "christopher.warth@web.de"
+    },
+    "license": {
+      "name": "MIT"
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/game/start": {
+      "post": {
+        "description": "Starts a new game.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "gamestart",
+            "in": "body",
+            "description": "Name of the player",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GameStart"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Game successfully started.",
+            "schema": {
+              "$ref": "#/definitions/GameInfo"
+            }
+          }
+        }
+      }
+    },
+    "/game/finish": {
+      "post": {
+        "description": "Finishs a new game.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "gameend",
+            "in": "body",
+            "description": "Game id and given answers",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GameEnd"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Game successfully finished.",
+            "schema": {
+              "$ref": "#/definitions/GameResults"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GameStart": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        }
+      }
+    },
+    "GameInfo": {
+      "type": "object",
+      "properties": {
+        "gameId": {
+          "type": "string"
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string",
+                    "example": "Who is a water pokemon?"
+                  },
+                  "options": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "example": 3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+    "GameEnd": {
+      "type": "object",
+      "properties": {
+        "gameId": {
+          "type": "string"
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "example": 3
+          }
+          }
+        }
+      },
+    "GameResults": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "integer"
+        },
+        "ladder": {
+          "type": "array",
+          "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "Ash"
+                },
+                "score": {
+                  "type": "integer",
+                  "example": 14
+                }
+              }
+            }
+          }
+        }
+      }
+  }
+}

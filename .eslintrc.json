@@ -1,0 +1,68 @@
+{
+  "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "node": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "plugin:testcafe/recommended",
+      "plugin:react/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:jsx-a11y/recommended",
+      "plugin:prettier/recommended",
+      "plugin:cypress/recommended"
+  ],
+  "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "parser": "babel-eslint"
+  },
+  "plugins": [      
+      "cypress",
+      "react-hooks",
+      "simple-import-sort"
+  ],
+  "rules": {
+      "import/order": "off",
+      "jsx-a11y/anchor-is-valid": [
+          "error",
+          {
+              "components": [
+                  "Link"
+              ],
+              "specialLink": [
+                  "hrefLeft",
+                  "hrefRight"
+              ],
+              "aspects": [
+                  "invalidHref",
+                  "preferButton"
+              ]
+          }
+      ],
+      "react/react-in-jsx-scope": "off",
+      "react/display-name": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",    
+      "react/prop-types": "off",
+      "simple-import-sort/sort": "error"
+  },
+  "settings": {
+    "import/resolver": {
+        "node": {
+          "paths": ["src"],          
+          "extensions": [".js", ".jsx"],
+          "moduleDirectory": ["node_modules", "src/"]
+        }
+      },
+      "react": {
+          "version": "detect"
+      }
+  }
+}

@@ -1,0 +1,38 @@
+export const table = {
+  'page-title': 'Pokemon Quiz Spiel | Zeige dein Wissen',
+  'heading-first': 'Poke',
+  'heading-second': 'QUIZ',
+  'name-input-label': 'Spielername',
+  'start-button-label': 'Start',
+  'question-count-pre': 'Frage ',
+  'score-pre': 'Deine Punktzahl ist ',
+  'ladder-label': 'Highscore:',
+  'finish-button-label': 'Beenden',
+  'name-error': 'Der Name muss mindestens 5 Zeichen enthalten.',
+  'game-start-error': 'Das Spiel konnte nicht gestartet werden.',
+  'game-end-error': 'Das Spiel konnte nicht abgeschlossen werden.',
+  'imprint-link': 'Impressum',
+  'loading-text': 'Laden... (kann einen Moment dauern)',
+  'question-id-min': 'Welches Pokemon hat die niedrigste Nummer im Pokedex?',
+  'question-id-max': 'Welches Pokemon hat die höchste Nummer im Pokedex?',
+  'question-height-min': 'Welches Pokemon ist am kleinsten?',
+  'question-height-max': 'Welches Pokemon ist am größten?',
+  'question-weight-min': 'Welches Pokemon ist am leichtesten?',
+  'question-weight-max': 'Welches Pokemon ist am schwersten?',
+  'question-hp-min': 'Welches Pokemon hat die wenigsten HP?',
+  'question-hp-max': 'Welches Pokemon hat die meisten HP?',
+  'question-attack-min': 'Welches Pokemon hat den schwächsten Angriff?',
+  'question-attack-max': 'Welches Pokemon hat den stärksten Angriff?',
+  'question-defense-min': 'Welches Pokemon hat die schwächste Verteidigung?',
+  'question-defense-max': 'Welches Pokemon hat die stärkste Verteidigung?',
+  'question-special-attack-min':
+    'Welches Pokemon hat den schwächsten Spezial-Angriff?',
+  'question-special-attack-max':
+    'Welches Pokemon hat den stärksten Spezial-Angriff?',
+  'question-special-defense-min':
+    'Welches Pokemon hat die schwächste Spezial-Verteidigung?',
+  'question-special-defense-max':
+    'Welches Pokemon hat die stärkste Spezial-Verteidigung?',
+  'question-speed-min': 'Welches Pokemon ist das langsamste?',
+  'question-speed-max': 'Welches Pokemon ist das schnellste?',
+};

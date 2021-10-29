@@ -1,0 +1,35 @@
+name: Pull Request Checks
+
+on: [pull_request]
+
+jobs:
+  testing:
+    strategy:
+      fail-fast: false
+      matrix:
+        command:
+          - style
+          - lint
+          - unit-test
+    name: ${{ matrix.command }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+      - name: 'Install dependencies'
+        run: npm install --frozen-lockfile
+      - name: 'Run ${{ matrix.command }}'
+        run: npm run ${{ matrix.command }}
+        env:
+          ANSWER: 34
+          
+  commitlint:
+    runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]'
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v1

@@ -1,0 +1,38 @@
+export const table = {
+  'page-title': 'Pokemon Quiz Game | Show your knowledge',
+  'heading-first': 'Poke',
+  'heading-second': 'QUIZ',
+  'name-input-label': 'Player name',
+  'start-button-label': 'Start',
+  'question-count-pre': 'Question ',
+  'score-pre': 'Your score is ',
+  'ladder-label': 'Highscore:',
+  'finish-button-label': 'Finish',
+  'name-error': 'The name must contain at least 5 letters.',
+  'game-start-error': 'Could not start the game.',
+  'game-end-error': 'Could not finish the game.',
+  'imprint-link': 'Imprint',
+  'loading-text': 'Loading... (can take a moment)',
+  'question-id-min': 'Which pokemon has the lowest number in pokedex?',
+  'question-id-max': 'Which pokemon has the highest number in pokedex?',
+  'question-height-min': 'Which pokemon is the smallest?',
+  'question-height-max': 'Which pokemon is the tallest?',
+  'question-weight-min': 'Which pokemon is the lightest?',
+  'question-weight-max': 'Which pokemon is the heaviest?',
+  'question-hp-min': 'Which pokemon has the least hp?',
+  'question-hp-max': 'Which pokemon has the most hp?',
+  'question-attack-min': 'Which pokemon has the weakest attack?',
+  'question-attack-max': 'Which pokemon has the strongest attack?',
+  'question-defense-min': 'Which pokemon has the weakest defense?',
+  'question-defense-max': 'Which pokemon has the strongest defense?',
+  'question-special-attack-min':
+    'Which pokemon has the weakest special attack?',
+  'question-special-attack-max':
+    'Which pokemon has the strongest special attack?',
+  'question-special-defense-min':
+    'Which pokemon has the weakest special defense?',
+  'question-special-defense-max':
+    'Which pokemon has the strongest special defense?',
+  'question-speed-min': 'Which pokemon is the slowest?',
+  'question-speed-max': 'Which pokemon is the fastest?',
+};
