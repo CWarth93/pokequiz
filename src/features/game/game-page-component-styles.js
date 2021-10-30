@@ -12,12 +12,12 @@ const RootContainer = styled.main`
   flex-direction: column;
   min-height: 100vh;
   height: content;
-  width: 100vw;
+  width: 100%;
 `;
 
 const HeadingContainer = styled.h1`
   height: 10vh;
-  min-height: 100px;
+  min-height: 60px;
   display: flex;
   flex-direction: row;
 `;
@@ -37,7 +37,8 @@ const HeadingSecond = styled.p`
 `;
 
 const ContentContainer = styled.div`
-  min-height: 80vh;
+  height: 80vh;
+  min-height: 580px;
   width: 80vw;
   display: flex;
   flex-direction: column;
@@ -45,20 +46,20 @@ const ContentContainer = styled.div`
 `;
 
 const LoadingPicture = styled.img`
-  height: auto;
-  width: 300px;
+  height: 20vh;
+  min-height: 180px;
+  width: auto;
   align-self: center;
 `;
 
 const StartPicture = styled.img`
-  height: auto;
-  width: 280px;
+  height: 20vh;
+  min-height: 180px;
   align-self: center;
 `;
 
 const StartInputContainer = styled.div`
   margin-top: 60px;
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -100,8 +101,8 @@ const OptionsContainer = styled.div`
 `;
 
 const PokemonOption = styled.img`
-  width: 30%;
-  max-width: 180px;
+  height: 15vh;
+  min-height: 140px;
 `;
 
 const TimerContainer = styled.div`
@@ -152,10 +153,12 @@ const FinishButton = styled.button`
   text-transform: uppercase;
   padding: 0px;
   align-self: center;
+  margin-bottom: 20px;
 `;
 
 const BottomBar = styled.div`
-  width: 100%;
+  height: 3vh;
+  width: 90vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
