@@ -24,7 +24,7 @@ const handler = async ({ gameId, answers }) => {
       .collection('games')
       .find()
       .sort({ score: -1 })
-      .limit(10)
+      .limit(5)
       .toArray()
   ).map(game => ({
     name: game.name,

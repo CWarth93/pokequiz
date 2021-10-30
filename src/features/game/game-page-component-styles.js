@@ -131,7 +131,7 @@ const LadderLabel = styled.h2`
 `;
 
 const LadderList = styled.ol`
-  margin-top: -20px;
+  margin-top: 20px;
   align-self: center;
   list-style-type: decimal;
 `;
@@ -140,7 +140,7 @@ const LadderEntry = styled.li`
   font-family: 'Pokemon';
   font-size: 14px;
   margin-left: -8px;
-  margin-bottom: -8px;
+  margin-bottom: 5px;
 `;
 
 const FinishButton = styled.button`
