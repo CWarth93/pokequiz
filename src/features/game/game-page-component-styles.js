@@ -103,6 +103,7 @@ const OptionsContainer = styled.div`
 const PokemonOption = styled.img`
   height: 15vh;
   min-height: 140px;
+  min-width: 140px;
 `;
 
 const TimerContainer = styled.div`

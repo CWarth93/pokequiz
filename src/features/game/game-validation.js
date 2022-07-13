@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import { getTexts } from '../../locales';
 
 const nameSchema = yup.object().shape({
-  name: yup.string().min(5, getTexts()['name-error']).required(),
+  name: yup.string().min(3, getTexts()['name-error']).required(),
 });
 
 const validateName = name => validate({ name }, nameSchema);
